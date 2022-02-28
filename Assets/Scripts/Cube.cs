@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : MonoBehaviour
+public class Cube : Shape
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    
+    void Awake()
     {
-        
+        //Inheritance
+        ShapeName = "cube";
+        color = Color.blue;
+        RotationAxis = "z";
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void RotateShape()
     {
-        
+        gameObject.transform.Rotate(Vector3.forward * Time.deltaTime * 100);
     }
+
 }

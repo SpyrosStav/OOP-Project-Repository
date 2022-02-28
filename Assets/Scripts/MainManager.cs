@@ -5,6 +5,7 @@ using System.IO;
 
 public class MainManager : MonoBehaviour
 {
+    //Encapsulation
     public static MainManager Instance {get; private set;}
 
     private void Awake()
